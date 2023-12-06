@@ -1,0 +1,9 @@
+******************************************************
+UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE
+NOMBRE: LARA ANDERSON
+CURSO: 2 ITIN
+MATERIA: POO
+DOCENTE: VERONICA MARTINEZ
+LABORTATORIO 2
+SISTEMA DE GESTION DE UN CINE
+******************************************************
