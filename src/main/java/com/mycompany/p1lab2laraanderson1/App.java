@@ -16,42 +16,51 @@ import org.json.simple.parser.ParseException;
 public class App {
     
     public static void main(String[] args) {
-    MenuPrincipal menu= new MenuPrincipal();
-      //  op2Json json=new op2Json();
-      //  json.OpJson(); 
-     ArrayList <String> caratula =new ArrayList();//crear arrarlist
+        
+    MenuPrincipal menu= new MenuPrincipal();//****Constructor de la clase menu (no me dejo ponerlo como metodo)
+    
+     ArrayList <String> caratula =new ArrayList();//***ArrayList de tipo String
+     
      caratula.add("******************************************************");
-     caratula.add("UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE");///metiendo datos a array list
-     caratula.add("NOMBRE: LARA ANDERSON");///metiendo datos a array list
-     caratula.add("CURSO: 2 ITIN");///metiendo datos a array list
-     caratula.add("MATERIA: POO");///metiendo datos a array list
-     caratula.add("DOCENTE: VERONICA MARTINEZ");///metiendo datos a array list
-     caratula.add("LABORTATORIO 2");///metiendo datos a array list
+     caratula.add("UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE");//***Escribir en en ArrayList con la funcion (NomArray.add("texto"))
+     caratula.add("NOMBRE: LARA ANDERSON");
+     caratula.add("CURSO: 2 ITIN");
+     caratula.add("MATERIA: POO");
+     caratula.add("DOCENTE: VERONICA MARTINEZ");
+     caratula.add("LABORTATORIO 2");
      caratula.add("SISTEMA DE GESTION DE UN CINE");
      caratula.add("******************************************************");
-///Escribir archivo
-     try(BufferedWriter bw=new BufferedWriter(new FileWriter("Encabezado.txt"))){
+
+     //***Escribir archivo*****//
+     
+     try(BufferedWriter bw=new BufferedWriter(new FileWriter("Encabezado.txt"))){///Declarando un atributo "bw" que refencia al archivo, como Buffered 
+        
          for (int i=0;i<caratula.size();i++){
-             bw.write(caratula.get(i));// escribir array / leer posicion de arraylist
+             bw.write(caratula.get(i));// escribir array / leer posicion de arraylist ".get(i)"
                bw.newLine();//salto de linea
          }  
-     }catch(IOException e){
+     }catch(IOException e){// Catch redirecciona la excepcion a IOException (Clase que ocurre cuando hay un defecto en las operacione s entrada y salida de archivos )
          System.out.println("Error-. Archivo no encontrado");
-     }finally{/// se coloca finaly despues de una sentancia de try
-///leer archivo
-        try(BufferedReader br=new BufferedReader(new FileReader("Encabezado.txt")) ){
+         
+     }finally{/// Garantiza que el siguiente bloque try se cumpla
+
+        try(BufferedReader br=new BufferedReader(new FileReader("Encabezado.txt")) ){//Declarando atributo br que referencia a un archivo txt
             String linea;
-            while((linea=br.readLine())!=null){
-                 System.out.println(linea);
+            while((linea=br.readLine())!=null){//atrubuto linea es igual al atributo br que lee todo el archivo liena por linea (.readLine()) hasta que no hay lineas (null)
+                
+                System.out.println(linea);///****Se muestra la linea leida
                  }
         
      }catch(IOException e){
+         
          System.out.println("Error. Archivo no encontrado");
+         
         } 
        }
      menu.OpMenu();
     }  
 }
+
 
 
 class MenuPrincipal{ 
@@ -68,14 +77,20 @@ class MenuPrincipal{
         System.out.println("3.....EliminarCaratula txt");
         System.out.println("4...Salir");
         System.out.println("*********************************");
-        op=scan.nextInt();
-        ////////////////////
         
-        switch(op){///VALIDAR MENU PARA QUE NO SE BUGGE CUANDO INSERTEN LETRAS
+        op=scan.nextInt();//****BUSCAR PARA CONTROLAR LAS LETRAS (ESTA EN FORMATO INT)
+        
+        switch(op){
             case 1:
+                
+                //*****OPCION 1 LLAMADA DE LAS CLASES************/// 
                 Opcion1.MostrarOpcion();
+                
                 break;
             case 2:
+                
+        //******OPCION 2***************///    
+                
         System.out.println("*********MOSTRANDO PELICULAS DISPONIBLES POR TEMPORADA (Se mostrara en un archivo CSV)*******");
         Opcion2.MostrarPeliculas();
         System.out.println("*************************************************************");
@@ -84,7 +99,8 @@ class MenuPrincipal{
                 System.out.println("3...Salir");
  
                 System.out.println("Elija una opcion");
-                int Op2=scan.nextInt();
+                
+                int Op2=scan.nextInt();///VALIDAR QUE INGRESE SOLO SE INGRESEN LETRAS, ADEMAS DE HACER QUE SE BUGUEE
                 while(Op2<1||Op2>3){
                  System.out.println("Error. Opcion no valida. Elija una opcion");
                 Op2=scan.nextInt();                   
@@ -134,24 +150,31 @@ class MenuPrincipal{
     
  class Op1{
      
+     ///***********Opcion de la clase empleado***************
      public void MostrarOpcion(){
-         char band='F';
+        char band='F';
+        
         Scanner scan= new Scanner(System.in);
+        
         System.out.println("********INGRESE DATOS DEL EMPLEADO A CARGO********");
+        
         System.out.println("Ingrese nombre del Empleado encargado: ");
+        
         String NombreEmpleado=scan.nextLine();
-        //////////////CONTROLAR LOS CARACTERES DEL EMPLEADO
-        while ((NombreEmpleado.length())>15){
+       
+        while ((NombreEmpleado.length())>15){ //////////////CONTROLAR LOS CARACTERES DEL EMPLEADO
                  System.out.print("***Error. Nombre del Empleado no puede exceder los 15 caracteres. Intente nuevamente: ");
                  NombreEmpleado=scan.nextLine();
             }
         
         System.out.println("Ingrese codigo Empleado: ");
-        String CodigoEmpleado=scan.nextLine();
-        ///////////////////////CONTROLAR EL CODIGO DE EMPLEADO
+        String CodigoEmpleado=scan.nextLine();///////////////////////CONTROLAR EL CODIGO DE EMPLEADO
+        
             while(band=='F'){
-               for(char CodigoEmp:CodigoEmpleado.toCharArray()){
+               for(char CodigoEmp:CodigoEmpleado.toCharArray()){////Controla que solo se envien numeros en String
+                   
                 if (!Character.isDigit(CodigoEmp)){
+                    
                     band='F';
          System.out.print("***Error, codigo de Empleado (Solo puede tener 5 numeros). Intente nuevamente: ");
          CodigoEmpleado=scan.nextLine();
@@ -163,30 +186,45 @@ class MenuPrincipal{
                  System.out.print("***Error, codigo de Empleado (Solo puede tener 5 numeros). Intente nuevamente: ");
                  CodigoEmpleado=scan.nextLine(); 
             }
-        ///////////////////////////////////////
+     
+            
+            
+            
         System.out.println("Ingrese Fecha de compra: ");
-        /////CONTROLAR DIA
+        
          System.out.println("Ingrese Dia (1-30):");
-         int dia=scan.nextInt();
+         
+         int dia=scan.nextInt();///CONTROLAR QUE SOLO SE DIGITEN NUMEROS Y NO SALTE UN ERROR CUANDO SE INGRESEN LETRAS
+         
          while(dia<1||dia>30){
              System.out.println("Error. dia solo tiene 30 dias. Intente de nuevo: ");
              dia=scan.nextInt();
          }
+         
          System.out.println("Ingrese Mes (1-12):");
-         int mes =scan.nextInt();
+         int mes =scan.nextInt();///CONTROLAR QUE SOLO SE DIGITEN NUMEROS Y NO SALTE UN ERROR CUANDO SE INGRESEN LETRAS
+         
          while(mes<1||mes>12){
              System.out.println("Error. Mes solo puede tener 12 meses (+)");
              mes =scan.nextInt();
          }
          System.out.println("Ingrese Anio (Anio Actual 2023): ");
-         int Anio=scan.nextInt();
+         int Anio=scan.nextInt();///CONTROLAR QUE SOLO SE DIGITEN NUMEROS Y NO SALTE UN ERROR CUANDO SE INGRESEN LETRAS
+         
          while(Anio!=2023){
              System.out.println("Error. Solo se puede elegir el anio actual");
              Anio=scan.nextInt();
          }
+        ///***variable String que tendra la 
+        ///concatenacion de el dia, mes y año
         String FechaCompraBoleto= Integer.toString(dia)+"/"+Integer.toString(mes)+"/"+Integer.toString(Anio);
+                                  //variable dia conveetida //variable mes convertida de//variable año convertida de 
+                                  //de                      //int a String              //int a String
+                                  //Int a String
+        
         Cajero cajero = new Cajero(FechaCompraBoleto,NombreEmpleado,CodigoEmpleado);
-        ///////////////////////////
+        
+        
         scan.nextLine();
         System.out.println("********INGRESE DATOS DEL CLIENTE A ATENDER*******");
         System.out.println("Ingrese nombre y apellidos del cliente ");
