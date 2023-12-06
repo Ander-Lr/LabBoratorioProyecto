@@ -8,21 +8,6 @@ public class Cliente extends Cine{
     Scanner scan =new Scanner(System.in);
     public Cliente(String Direccion, String Correo, String Nombre, String Codigo) {
         super(Nombre, Codigo);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         this.Direccion = Direccion;
         this.Correo = Correo;
     }

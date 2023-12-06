@@ -69,7 +69,9 @@ class MenuPrincipal{
         System.out.println("4...Salir");
         System.out.println("*********************************");
         op=scan.nextInt();
-        switch(op){
+        ////////////////////
+        
+        switch(op){///VALIDAR MENU PARA QUE NO SE BUGGE CUANDO INSERTEN LETRAS
             case 1:
                 Opcion1.MostrarOpcion();
                 break;
