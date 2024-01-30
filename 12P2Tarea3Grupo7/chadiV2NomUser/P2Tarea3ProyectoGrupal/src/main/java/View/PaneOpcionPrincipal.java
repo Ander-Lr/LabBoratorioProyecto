@@ -29,6 +29,7 @@ public class PaneOpcionPrincipal extends javax.swing.JPanel implements Runnable{
         JAcercaDeNosotros = new javax.swing.JLabel();
         JContacto = new javax.swing.JLabel();
         lbReloj = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         JLFondo = new javax.swing.JLabel();
 
         setForeground(new java.awt.Color(20, 20, 20));
@@ -46,6 +47,10 @@ public class PaneOpcionPrincipal extends javax.swing.JPanel implements Runnable{
         lbReloj.setForeground(new java.awt.Color(255, 255, 255));
         add(lbReloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Estreno2 (1).gif"))); // NOI18N
+        jLabel1.setPreferredSize(new java.awt.Dimension(801, 236));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 800, 236));
+
         JLFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo_Caretelera.png"))); // NOI18N
         add(JLFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -55,6 +60,7 @@ public class PaneOpcionPrincipal extends javax.swing.JPanel implements Runnable{
     private javax.swing.JLabel JAcercaDeNosotros;
     private javax.swing.JLabel JContacto;
     private javax.swing.JLabel JLFondo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbReloj;
     // End of variables declaration//GEN-END:variables
 
