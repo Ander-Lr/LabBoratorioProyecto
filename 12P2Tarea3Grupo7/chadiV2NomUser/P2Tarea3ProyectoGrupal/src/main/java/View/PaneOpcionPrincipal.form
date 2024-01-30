@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="14" green="14" red="14" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -11,20 +16,48 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,44,0,0,1,-112"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,88,0,0,3,121"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="JAcercaDeNosotros">
       <Properties>
-        <Property name="text" type="java.lang.String" value="PRINCIPAL"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/acercaDeNosotro.png"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;head&gt;&#xa;&lt;style&gt;&#xa;#contenido {&#xa;  background: #fff;&#xa;  color: #000;&#xa;  padding: 15px;&#xa;}&#xa;&lt;/style&gt;&#xa;&lt;/head&gt;&#xa;&lt;body&gt;&#xa;&#xa;&lt;div id=&quot;contenido&quot;&gt;&#xa;  &lt;p&gt;&#xa1;Hola! Somos estudiantes de 2do semestre de la carrera,&lt;/p&gt;&#xa;  &lt;p&gt;Ingenier&#xed;a en Tecnolog&#xed;as de la Informaci&#xf3;n. Estamos en el&lt;/p&gt;&#xa;  &lt;p&gt;curso de Programaci&#xf3;n Orientada a Objetos. Esta es una app&lt;/p&gt;&#xa;  &lt;p&gt;desarrollada para la gesti&#xf3;n de cine. Somos el grupo n&#xfa;mero&lt;/p&gt;&#xa;  &lt;p&gt;7, conformado por Lara Anderson, Shadia Reyes y Jhonny Romero.&lt;/p&gt;&#xa;&lt;/div&gt;&#xa;&#xa;&lt;/body&gt;&#xa;&lt;/html&gt;"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="100" width="-1" height="-1"/>
+          <AbsoluteConstraints x="530" y="10" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JContacto">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/contactos.png"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;head&gt;&#xa;&lt;style&gt;&#xa;#contenido {&#xa;  background: #fff;&#xa;  color: #000;&#xa;  padding: 15px;&#xa;}&#xa;&lt;/style&gt;&#xa;&lt;/head&gt;&#xa;&lt;body&gt;&#xa;&#xa;&lt;div id=&quot;contenido&quot;&gt;&#xa;  &lt;p&gt;Jhonny Joel Romero Lopez&lt;/p&gt;&#xa;  &lt;p&gt;+593997173609&lt;/p&gt;&#xa;  &lt;p&gt;jjromero5@espe.edu.ec&lt;/p&gt;&#xa;  &lt;p&gt;Santo Domingo Ecuador&lt;/p&gt;&#xa;  &lt;hr&gt; &lt;!-- L&#xed;nea divisoria --&gt;&#xa;&#xa;  &lt;p&gt;SHADYA NICOLE REYES ZAMBRANO&lt;/p&gt;&#xa;  &lt;p&gt;+593994993546&lt;/p&gt;&#xa;  &lt;p&gt;snreyes2@espe.edu.ec&lt;/p&gt;&#xa;  &lt;p&gt;Santo Domingo Ecuador&lt;/p&gt;&#xa;  &lt;hr&gt; &lt;!-- L&#xed;nea divisoria --&gt;&#xa;&#xa;  &lt;p&gt;ANDERSON LENIN LARA CHICAIZA&lt;/p&gt;&#xa;  &lt;p&gt;+593998779907&lt;/p&gt;&#xa;  &lt;p&gt;allara1@espe.edu.ec&lt;/p&gt;&#xa;  &lt;p&gt;Santo Domingo Ecuador&lt;/p&gt;&#xa;&lt;/div&gt;&#xa;&#xa;&lt;/body&gt;&#xa;&lt;/html&gt;"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="730" y="10" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JLFondo">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Images/Fondo_Caretelera.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
